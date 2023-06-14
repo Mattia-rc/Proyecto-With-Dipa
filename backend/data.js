@@ -1,7 +1,23 @@
+import bcrypt from "bcryptjs";
+
 const data = {
+    users: [
+        {
+          name: 'Basir',
+          email: 'admin@example.com',
+          password: bcrypt.hashSync('123456'),
+          isAdmin: true,
+        },
+        {
+          name: 'John',
+          email: 'user@example.com',
+          password: bcrypt.hashSync('123456'),
+          isAdmin: false,
+        },
+      ],
     products: [
         {
-            _id: '1',
+            /* _id: '1', */
             name: 'Nike Slim shirt',
             slug: 'nike-slim-shirt',
             category: 'Shirts',
@@ -14,7 +30,7 @@ const data = {
             description: 'high quality shirt',
         },
         {
-            _id: '2',
+            /* _id: '2', */
             name: 'Adidas Slim shirt',
             slug: 'Adidas-slim-shirt',
             category: 'Shirts',
@@ -27,7 +43,7 @@ const data = {
             description: 'high quality shirt',
         },
         {
-            _id: '3',
+            /* _id: '3', */
             name: 'Reebook Slim shirt',
             slug: 'Reebook-slim-shirt',
             category: 'Shirts',
@@ -39,45 +55,7 @@ const data = {
             numReviews: 9,
             description: 'high quality shirt',
         },
-        {
-            _id: '4',
-            name: 'Vans Slim shirt',
-            slug: 'Vans-slim-shirt',
-            category: 'Shirts',
-            image: '/img/p4.jpg',
-            price: 120,
-            countInStock: 0,
-            brand: 'Vans',
-            rating: 4.5,
-            numReviews: 4,
-            description: 'high quality shirt',
-        },
-        {
-            _id: '5',
-            name: 'Adidas Slim shirt',
-            slug: 'Adidas-slim-shirt',
-            category: 'Shirts',
-            image: '/img/p2.jpg',
-            price: 120,
-            countInStock: 10,
-            brand: 'Adidas',
-            rating: 4.5,
-            numReviews: 4,
-            description: 'high quality shirt',
-        },
-        {
-            _id: '6',
-            name: 'Nike Slim shirt',
-            slug: 'nike-slim-shirt',
-            category: 'Shirts',
-            image: '/img/p1.jpg',
-            price: 120,
-            countInStock: 0,
-            brand: 'Nike',
-            rating: 4.5,
-            numReviews: 10,
-            description: 'high quality shirt',
-        },
+       
     ],
 };
 
